@@ -18,9 +18,14 @@ composer require thejawker/super-random
 As of Laravel 5.5 it will magically register the package.
 
 ## Usage
+Just simple call the generate method on SuperRandom Facade or the handy shortcut helper function.
 
-You can add `Route::module('name', ['only'](optional), ['options](optional))` in any of your routes files. 
-The second parameter will allow you to `only` use specific actions, and the third being general options. Refer to the [Laravel docs](https://laravel.com/docs/5.4/controllers#resource-controllers) for those.  
+```php
+$code = SuperRandom::generate();
+echo $code; // 
+
+$code = superRandom();
+``` 
 
 ### Examples:
 

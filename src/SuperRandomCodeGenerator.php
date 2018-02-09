@@ -2,17 +2,17 @@
 
 namespace TheJawker\SuperRandom;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Eloquent\Model;
 
 class SuperRandomCodeGenerator
 {
-    public $length = 8;
-    public $chars = 'ABCDEFGHJKLMNPQRSTUVW23456789';
     public $table;
     public $column;
+    public $length = 8;
+    public $chars = 'ABCDEFGHJKLMNPQRSTUVW23456789';
 
     public function generate($config = [])
     {
