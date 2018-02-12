@@ -50,7 +50,7 @@ class SuperRandomCodeGenerator
         return $this;
     }
 
-    public function for($tableColumn)
+    public function column($tableColumn)
     {
         if (class_exists($tableColumn) && is_subclass_of($tableColumn, Model::class)) {
             $table = (new $tableColumn)->getTable();

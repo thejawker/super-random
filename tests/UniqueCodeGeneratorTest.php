@@ -106,7 +106,7 @@ class UniqueCodeGeneratorTest extends TestCase
     /** @test */
     public function a_shortcut_for_table_column_is_present()
     {
-        $generator = SuperRandom::for('table.column');
+        $generator = SuperRandom::column('table.column');
 
         $this->assertEquals('table', $generator->table);
         $this->assertEquals('column', $generator->column);
@@ -115,7 +115,7 @@ class UniqueCodeGeneratorTest extends TestCase
     /** @test */
     public function a_model_can_be_passed_alternatively_column_will_be_code()
     {
-        $generator = SuperRandom::for(FakeUser::class);
+        $generator = SuperRandom::column(FakeUser::class);
 
         $this->assertEquals('fake_users', $generator->table);
         $this->assertEquals('code', $generator->column);
@@ -132,7 +132,7 @@ class UniqueCodeGeneratorTest extends TestCase
     /** @test */
     public function shortcuts_can_be_used()
     {
-        $generator = SuperRandom::for('test.code')->length(18);
+        $generator = SuperRandom::column('test.code')->length(18);
 
         $code = $generator->generate();
 
